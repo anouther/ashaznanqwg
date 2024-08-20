@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: #333; /* Warna latar belakang gelap */
+  color: white;
+  font-family: "Rubik", sans-serif; 
+  position: relative;
+  height: 100vh;
+}
+p {
+    margin: 20px; /* Margin di sekitar elemen <p> */
+    padding: 10px; /* Padding di dalam elemen <p> jika diinginkan */
+    text-align: justify; /* Meratakan teks untuk pembacaan lebih baik */
+}
+
+.rain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.drop {
+  position: absolute;
+  width: 1px;
+  height: 90px;
+  background: rgba(255, 255, 255, 0.7);
+  opacity: 0.5;
+  animation: fall linear;
+}
+
+@keyframes fall {
+  to {
+      transform: translateY(100vh);
+  }
+}
